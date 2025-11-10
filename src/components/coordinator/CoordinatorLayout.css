@@ -1,0 +1,202 @@
+﻿/* Coordinator Layout Styles */
+
+/* Ensure full width from root */
+html, body {
+  width: 100% !important;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.coordinator-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100% !important;
+  background-color: var(--background);
+}
+
+/* Sidebar */
+.coordinator-sidebar {
+  width: 260px;
+  min-width: 260px;
+  position: fixed;
+  height: 100vh;
+  left: 16px;
+  top: 0;
+  overflow-y: auto;
+  background-color: white;
+  border-right: 1px solid var(--border-color);
+  z-index: 100;
+  padding: 0;
+}
+
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-logo {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #0d7f8a 100%);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.sidebar-club-name {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: var(--text-primary);
+}
+
+.sidebar-season {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.sidebar-section {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-section-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--spacing-md);
+  padding-left: 4px;
+}
+
+.team-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 4px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.team-button:hover {
+  background: var(--background);
+}
+
+.team-button.active {
+  background: var(--primary-color);
+  color: white;
+  font-weight: 600;
+}
+
+.team-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.team-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.team-count {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.sidebar-actions {
+  padding: var(--spacing-md);
+}
+
+.action-button {
+  width: 100%;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Main Content */
+.coordinator-main {
+  margin-left: 276px;
+  flex: 1;
+  min-height: 100vh;
+  width: calc(100% - 276px);
+  background-color: var(--background);
+}
+
+/* Dashboard */
+.dashboard-banner {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #0d7f8a 100%);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dashboard-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.dashboard-subtitle {
+  font-size: 15px;
+  opacity: 0.9;
+  margin: 4px 0 0 0;
+}
+
+.dashboard-tabs {
+  background-color: white;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  padding: 0 var(--spacing-lg);
+  gap: 8px;
+}
+
+.tab-button {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: var(--text-secondary);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-button.active {
+  border-bottom-color: var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.dashboard-content {
+  padding: var(--spacing-xl);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
