@@ -1023,14 +1023,14 @@ export const ManageFamilies: React.FC = () => {
                     </div>
                   ) : (
                     <div style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>
-                      {family.preferredShifts?.length > 0 && (
+                      {(family.preferredShifts?.length ?? 0) > 0 && (
                         <div style={{ marginBottom: '4px' }}>
-                          <span style={{ color: 'var(--success-color)' }}>👍 Foretrekker:</span> {family.preferredShifts.join(', ')}
+                          <span style={{ color: 'var(--success-color)' }}>👍 Foretrekker:</span> {(family.preferredShifts ?? []).join(', ')}
                         </div>
                       )}
-                      {family.restrictedShifts?.length > 0 && (
+                      {(family.restrictedShifts?.length ?? 0) > 0 && (
                         <div>
-                          <span style={{ color: 'var(--danger-color)' }}>🚫 Kan ikke:</span> {family.restrictedShifts.join(', ')}
+                          <span style={{ color: 'var(--danger-color)' }}>🚫 Kan ikke:</span> {(family.restrictedShifts ?? []).join(', ')}
                         </div>
                       )}
                       {!family.preferredShifts?.length && !family.restrictedShifts?.length && (
