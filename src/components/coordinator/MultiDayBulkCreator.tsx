@@ -94,7 +94,7 @@ export const MultiDayBulkCreator: React.FC = () => {
   const [eventName, setEventName] = useState('');
   const [location, _setLocation] = useState('Stadion');
   const [sport, setSport] = useState('football');
-  const [slotDuration, _setSlotDuration] = useState(0);
+  const [_slotDuration, _setSlotDuration] = useState(0);
   const [assignmentMode, setAssignmentMode] = useState<'auto' | 'manual' | 'self-service'>('auto');
   const [selfServiceOpenDate, setSelfServiceOpenDate] = useState('');
   const [selfServiceOpenTime, setSelfServiceOpenTime] = useState('12:00');
